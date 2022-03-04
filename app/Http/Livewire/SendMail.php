@@ -42,7 +42,8 @@ class SendMail extends Component
         ]);
         dispatch(new SendMailJob($data));
 
-        session()->flash('success', 'Message successfully sent');
+        // session()->flash('success', 'Message successfully sent');
         $this->reset();
+        return redirect('/showmail');
     }
 }
