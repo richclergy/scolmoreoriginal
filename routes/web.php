@@ -25,4 +25,9 @@ Route::get('/sendmail', function () {
     return view('sendmail');
 })->middleware(['auth'])->name('sendmail');
 
+Route::get('/showmail', function () {
+    return view('show-sent-mail');
+})->middleware(['auth'])->name('showmail');
+// Route::livewire('showmail', '');
+
 require __DIR__.'/auth.php';
